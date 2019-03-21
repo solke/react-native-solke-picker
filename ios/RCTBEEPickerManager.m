@@ -7,12 +7,12 @@
 //
 
 #import "RCTBEEPickerManager.h"
-#import "BzwPicker.h"
+#import "RNSolkePicker.h"
 #import <React/RCTEventDispatcher.h>
 
 @interface RCTBEEPickerManager()
 
-@property(nonatomic,strong)BzwPicker *pick;
+@property(nonatomic,strong)RNSolkePicker *pick;
 @property(nonatomic,assign)float height;
 @property(nonatomic,weak)UIWindow * window;
 
@@ -65,7 +65,7 @@ RCT_EXPORT_METHOD(_init:(NSDictionary *)indic){
 
     [self.window.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 
-        if ([obj isKindOfClass:[BzwPicker class]]) {
+        if ([obj isKindOfClass:[RNSolkePicker class]]) {
             dispatch_async(dispatch_get_main_queue(), ^{
 
                 [obj removeFromSuperview];
@@ -80,7 +80,7 @@ RCT_EXPORT_METHOD(_init:(NSDictionary *)indic){
         self.height=220;
     }
     
-    self.pick=[[BzwPicker alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, self.height) dic:dataDic leftStr:pickerCancelBtnText centerStr:pickerTitleText rightStr:pickerConfirmBtnText topbgColor:pickerToolBarBg bottombgColor:pickerBg leftbtnbgColor:pickerCancelBtnColor rightbtnbgColor:pickerConfirmBtnColor centerbtnColor:pickerTitleColor selectValueArry:selectArry weightArry:weightArry pickerToolBarFontSize:pickerToolBarFontSize pickerFontSize:pickerFontSize pickerFontColor:pickerFontColor  pickerRowHeight: pickerRowHeight pickerFontFamily:pickerFontFamily];
+    self.pick=[[RNSolkePicker alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, self.height) dic:dataDic leftStr:pickerCancelBtnText centerStr:pickerTitleText rightStr:pickerConfirmBtnText topbgColor:pickerToolBarBg bottombgColor:pickerBg leftbtnbgColor:pickerCancelBtnColor rightbtnbgColor:pickerConfirmBtnColor centerbtnColor:pickerTitleColor selectValueArry:selectArry weightArry:weightArry pickerToolBarFontSize:pickerToolBarFontSize pickerFontSize:pickerFontSize pickerFontColor:pickerFontColor  pickerRowHeight: pickerRowHeight pickerFontFamily:pickerFontFamily];
     
     _pick.bolock=^(NSDictionary *backinfoArry){
 

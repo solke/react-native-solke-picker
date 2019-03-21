@@ -14,7 +14,7 @@
 
 typedef void(^backBolock)(NSDictionary * );
 
-@interface BzwPicker : UIView<UIPickerViewDataSource,UIPickerViewDelegate>
+@interface RNSolkePicker : UIView<UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (strong,nonatomic)UIPickerView *pick;
 
