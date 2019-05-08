@@ -42,12 +42,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
-        <com.beefe.picker.view.PickerViewLinkage
+        <com.solke.picker.view.PickerViewLinkage
             android:id="@+id/pickerViewLinkage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.beefe.picker.view.PickerViewAlone
+        <com.solke.picker.view.PickerViewAlone
             android:id="@+id/pickerViewAlone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
